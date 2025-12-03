@@ -1,0 +1,69 @@
+/* ===== PROCESS SECTION ===== */
+.process-section {
+  background-color: #f4e6d5;   /* نفس البيج بتاع السكاشن اللي فوق */
+  padding: 60px 0;
+  font-family: Arial, sans-serif;
+}
+
+.process-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.process-title {
+  font-size: 20px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 38px;
+}
+
+.process-card {
+  text-align: left;
+}
+
+.process-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* عنوان كل كارد */
+.process-card-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* النص تحت العنوان */
+.process-card-text {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .process-card {
+    text-align: center;
+  }
+
+  .process-card-text {
+    text-align: left;
+  }
+}

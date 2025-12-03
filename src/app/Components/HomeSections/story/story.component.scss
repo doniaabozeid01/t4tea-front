@@ -1,0 +1,62 @@
+/* ===== STORY SECTION ===== */
+.story-section {
+  background-color: #f4e6d5; /* خلفية بيج نفس الشكل */
+  padding: 60px 0;
+  font-family: Arial, sans-serif;
+}
+
+.story-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.story-title {
+  font-size: 20px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.story-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  text-align: left;
+}
+
+/* الصورة */
+.story-image img {
+  width: 500px;
+  height: 350px;
+  object-fit: cover;
+//   border: 3px solid #1d75b9; /* بوردر أزرق زي اللي ظاهر */
+}
+
+/* النص */
+.story-text {
+  max-width: 450px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #000;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .story-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-text {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .story-image img {
+    width: 100%;
+    height: auto;
+  }
+}

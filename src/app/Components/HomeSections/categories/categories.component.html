@@ -1,0 +1,37 @@
+<section class="tea-section">
+  <div class="container">
+
+    <p class="tea-subtitle">PREMIUM ARTISANAL TEA BLENDS</p>
+
+    <!-- الجزء اللي فوق: أسماء الكاتيجوري -->
+    <div class="tea-tabs overflow-hidden">
+      <button
+        *ngFor="let cat of categories"
+        class="tea-tab"
+        (click)="selectCategory(cat)"
+        [class.active]="cat.id === selectedCategory.id">
+        {{ cat.title }}
+      </button>
+    </div>
+
+    <!-- المنتجات اللي بتتغير حسب الـ category -->
+    <div class="tea-grid">
+      <div class="tea-card" *ngFor="let product of selectedCategory.products">
+        <!-- <h2 class="tea-category">
+          {{ selectedCategory.title }}
+        </h2> -->
+        <div class="tea-image-wrap">
+          <img [src]="product.image" [alt]="product.name" />
+        </div>
+        <div class="tea-info">
+          <p class="tea-name">{{ product.name }}</p>
+          <p class="tea-price">LE {{ product.price }} EGP</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tea-actions">
+      <a href="#" class="btn-view-all">VIEW ALL</a>
+    </div>
+  </div>
+</section>

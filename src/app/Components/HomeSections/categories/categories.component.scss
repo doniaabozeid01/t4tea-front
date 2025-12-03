@@ -1,0 +1,181 @@
+/* ===== TEA SECTION ===== */
+.tea-section {
+    background-color: #f4e6d5;
+    /* قريب من اللون في الصورة */
+    padding: 60px 0 70px;
+    font-family: Arial, sans-serif;
+}
+
+.tea-section .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.tea-subtitle {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.tea-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.tea-card {
+    text-align: center;
+}
+
+.tea-category {
+    font-size: 18px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.tea-image-wrap {
+    width: 230px;
+    height: 230px;
+    margin: 0 auto 25px;
+}
+
+.tea-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.tea-info .tea-name {
+    font-size: 13px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.tea-info .tea-price {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.tea-actions {
+    margin-top: 40px;
+}
+
+.btn-view-all {
+    display: inline-block;
+    border: 1px solid #000;
+    padding: 10px 35px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+}
+
+.btn-view-all:hover {
+    background-color: #000;
+    color: #f4e6d5;
+}
+
+/* رِسبونسيف للموبايل */
+@media (max-width: 900px) {
+    .tea-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .tea-category {
+        letter-spacing: 4px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tea-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.tea-tab {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.tea-tab.active::after,
+.tea-tab:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+}
+
+/* تقدري تشيلي h2 من الكارد لو حابة وتخليه في التاب بس */
+.tea-category {
+    font-size: 16px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+
+
+
+@media (max-width:768px) {
+    .tea-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+        width: 100%; padding: 0;
+        margin: 0;
+    }
+
+
+    .tea-tab {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 12px;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        padding-bottom: 5px;
+        position: relative;
+    }
+    .container{
+        width: 98%;
+        padding: 0!important;
+    }
+}

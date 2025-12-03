@@ -1,0 +1,102 @@
+// /* ===== GALLERY SECTION ===== */
+// .gallery-section {
+//   background-color: #f4e6d5;   /* نفس الخلفية البيج */
+//   padding: 40px 0;
+// }
+
+// .gallery-container {
+//   max-width: 1600px;
+//   max-height: 80vh;
+//   margin: 0 auto;
+//   padding: 0 20px;
+// }
+
+// .gallery-grid {
+//   display: grid;
+// //   max-height: 80vh;
+//   grid-template-columns: repeat(3, 1fr);
+//   gap: 0; /* الصور لازقة في بعض زي التصميم */
+// }
+
+// .gallery-item img {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   display: block;
+//   max-height: 75vh;
+
+// }
+
+// /* RESPONSIVE */
+// @media (max-width: 900px) {
+//   .gallery-grid {
+//     grid-template-columns: 1fr;
+//     row-gap: 10px;
+//   }
+// }
+
+
+
+.parent {
+    width: 100%;
+    // width: 1740px;
+
+
+}
+
+
+
+/* ===== HERO SECTION ===== */
+.hero-gallery {
+    width: 100%;
+    height: 80vh;
+    /* hero height */
+    padding: 0;
+    margin: 0;
+    background: #f4e6d5;
+    padding: 0 50px;
+}
+
+.hero-grid {
+    width: 100%;
+    height: 100%;
+    height: 80vh;
+    /* hero height */
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.hero-grid img {
+    width: 100%;
+    height: 100%;
+    height: 75vh;
+    /* hero height */
+    padding: 0 15px;
+    object-fit: cover;
+    /* مهم جداً */
+    display: block;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 900px) {
+    .hero-gallery {
+        height: auto !important;
+        /* الغي hero height في الموبايل */
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        /* بدل 3 صفوف */
+    }
+
+    .hero-grid img {
+        height: auto;
+        /* سيبيه طبيعي */
+    }
+
+    .hero-gallery {
+        padding: 0 5px;
+    }
+}
