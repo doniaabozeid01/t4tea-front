@@ -1,0 +1,21 @@
+<!-- navbar.component.html -->
+<nav class="t4-navbar">
+  <div class="t4-navbar__top">
+    <a class="t4-navbar__logo" routerLink="/">
+      <img src="../../../assets/Untitled-1-01 (4).png" alt="T4 Tea">
+    </a>
+
+    <button class="t4-navbar__toggle" (click)="isOpen = !isOpen">
+      ☰
+    </button>
+  </div>
+
+  <ul class="t4-navbar__links" [ngClass]="{ 'is-open': isOpen }">
+    <li><a routerLink="/shop">SHOP</a></li>
+    <li><a routerLink="/wellness">WELLNESS</a></li>
+    <li><a routerLink="/teaware">TEAWARE</a></li>
+    <li><a routerLink="/gifts">GIFTS</a></li>
+    <li><a routerLink="/about">ABOUT US</a></li>
+    <li><a routerLink="/contact">CONTACT US</a></li>
+  </ul>
+</nav>

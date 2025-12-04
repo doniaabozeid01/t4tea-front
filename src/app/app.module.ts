@@ -9,6 +9,12 @@ import { StoryComponent } from './Components/HomeSections/story/story.component'
 import { ProcessComponent } from './Components/HomeSections/process/process.component';
 import { TeawareComponent } from './Components/HomeSections/teaware/teaware.component';
 import { HeroComponent } from './Components/HomeSections/hero/hero.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { FooterComponent } from './Components/footer/footer.component';
+import { PendingComponent } from './Components/pending/pending.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BestSellerComponent } from './Components/HomeSections/best-seller/best-seller.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // ✅ مهم
 
 @NgModule({
   declarations: [
@@ -18,11 +24,17 @@ import { HeroComponent } from './Components/HomeSections/hero/hero.component';
     StoryComponent,
     ProcessComponent,
     TeawareComponent,
-    HeroComponent
+    HeroComponent,
+    NavbarComponent,
+    FooterComponent,
+    PendingComponent,
+    BestSellerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

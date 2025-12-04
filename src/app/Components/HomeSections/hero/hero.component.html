@@ -20,7 +20,7 @@
 
 
 
-<div class="parent">
+<!-- <div class="parent  d-md-block d-none">
     <section class="hero-gallery py-5">
         <div class="hero-grid">
             <img src="../../../../assets/hero/6Q1A2201 1.png" alt="Tea 1">
@@ -28,4 +28,76 @@
             <img src="../../../../assets/hero/6Q1A2356 1.png" alt="Tea 3">
         </div>
     </section>
+</div> -->
+
+
+<!-- 
+<div class="parent ">
+  <section class="hero-gallery py-5">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../../../assets/hero/6Q1A2201 1.png" class="d-block w-100" alt="Tea 1">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../../assets/hero/6Q1A2142 1.png" class="d-block w-100" alt="Tea 2">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../../assets/hero/6Q1A2356 1.png" class="d-block w-100" alt="Tea 3">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </section>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="parent">
+  <section class="hero-gallery py-0">
+    <owl-carousel-o [options]="heroOptions" class="hero-carousel">
+
+      <ng-container *ngFor="let slide of slides">
+        <ng-template carouselSlide>
+
+          <!-- صورة -->
+          <img *ngIf="slide.type === 'image'"
+               [src]="slide.src"
+               [alt]="slide.alt"
+               class="hero-media" />
+
+          <!-- فيديو -->
+          <video *ngIf="slide.type === 'video'"
+                 class="hero-media"
+                 [attr.alt]="slide.alt"
+                 autoplay
+                 muted
+                 loop
+                 playsinline>
+            <source [src]="slide.src" type="video/mp4" />
+            متصفحك لا يدعم تشغيل الفيديو.
+          </video>
+
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+  </section>
 </div>

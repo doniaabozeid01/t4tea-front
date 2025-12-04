@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #ffffff;
+}
+
+.maintenance-wrapper {
+    text-align: center;
+    height: 100vh;
+}
+
+.logo {
+    width: 180px;
+    max-width: 50vw;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.message {
+    font-size: 1.5rem;
+    color: #333333;
+    margin-bottom: 24px;
+}
+
+/* الـ spinner الـ pure CSS */
+.loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid #f0f0f0;
+    border-top-color: #ff8a00; /* البرتقالي */
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,142 @@
+.best-sellers-section {
+  background-color: #f4e6d5;
+  padding: 70px 0;
+}
+
+.best-sellers-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.best-sellers-title {
+  font-size: 18px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+/* السلايدر */
+.best-sellers-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* السلايد نفسه */
+.best-sellers-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+/* الصور */
+.product-image {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image img {
+  width: 350px;
+  height: auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* صورة الشاي (يمين) فيها النص تحتها */
+.product-image.loose {
+  gap: 10px;
+}
+
+.product-image.loose img {
+  width: 300px;
+  height: 300px;
+}
+
+.product-image.loose .product-info {
+  margin-top: 8px;
+}
+
+.product-name {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+}
+
+.product-price {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  margin: 0 0 10px;
+}
+
+.shop-btn {
+  padding: 6px 20px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* أزرار السهمين */
+.nav-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background-color: #0a4035;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* النقط تحت السلايدر */
+.dots {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.dot.active {
+  background: #000;
+}
+
+/* أنيميشن خفيفة لما يتغير البرودكت */
+.best-sellers-slide {
+    width: 100%;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+:host ::ng-deep .best-sellers-slide {
+  /* لو حابة تضيفي كلاس وقت التغيير من TS نعدّل هنا */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .best-sellers-slide {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .nav-btn {
+    width: 32px;
+    height: 32px;
+  }
+}

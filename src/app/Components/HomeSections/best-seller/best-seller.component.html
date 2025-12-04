@@ -1,0 +1,59 @@
+<section class="best-sellers-section">
+  <div class="best-sellers-container">
+
+    <h2 class="best-sellers-title">Best Sellers</h2>
+
+    <div class="best-sellers-slider">
+      <!-- زرار السابق -->
+      <button class="nav-btn prev" (click)="prevProduct()">
+        ‹
+      </button>
+
+      <!-- السلايد -->
+      <div class="best-sellers-slide ">
+
+        <!-- صورة العلبة مع هوفر -->
+        <div class="product-image pack">
+          <img
+            [src]="currentProduct.packImage"
+            [alt]="currentProduct.name + ' pack'"
+          />
+        </div>
+
+        <!-- صورة الشاي + النص -->
+        <div class="product-image loose">
+          <img
+            (mouseenter)="isPackHovered = true"
+            (mouseleave)="isPackHovered = false"
+            [src]="isPackHovered ? currentProduct.hoverImage : currentProduct.looseImage"
+            [alt]="currentProduct.name + ' loose tea'"
+          />
+
+          <div class="product-info">
+            <h3 class="product-name">{{ currentProduct.name }}</h3>
+            <p class="product-price">
+              LE {{ currentProduct.price | number:'1.2-2' }}
+            </p>
+            <button class="shop-btn">SHOP NOW</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- زرار التالي -->
+      <button class="nav-btn next" (click)="nextProduct()">
+        ›
+      </button>
+    </div>
+
+    <!-- النقط -->
+    <div class="dots">
+      <span
+        *ngFor="let p of products; let i = index"
+        class="dot"
+        [class.active]="i === currentIndex">
+      </span>
+    </div>
+
+  </div>
+</section>

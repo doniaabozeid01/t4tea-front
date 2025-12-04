@@ -7,7 +7,7 @@
 }
 
 .tea-section .container {
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
@@ -159,7 +159,8 @@
         justify-content: center;
         gap: 10px;
         margin-bottom: 30px;
-        width: 100%; padding: 0;
+        width: 100%;
+        padding: 0;
         margin: 0;
     }
 
@@ -174,8 +175,68 @@
         padding-bottom: 5px;
         position: relative;
     }
-    .container{
+
+    .container {
         width: 98%;
-        padding: 0!important;
+        padding: 0 !important;
     }
+}
+
+.tea-section {
+    background-color: #f5e4cf; // لو عايزة نفس إحساس الصورة
+}
+
+.tea-subtitle {
+    text-align: center;
+    letter-spacing: 0.25em;
+    font-size: 12px;
+    margin-bottom: 24px;
+}
+
+.tea-carousel {
+  margin: auto;
+  text-align: center;
+  margin-top: 40px;
+
+  // ممكن تتحكمي في عرض الكاروسيل هنا
+  max-width: 1500px;
+}
+
+.tea-card {
+  text-align: center;
+}
+
+/* الصور الدائرية */
+.tea-image-wrap {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tea-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.tea-img.main {
+  opacity: 1;
+}
+
+.tea-img.hover {
+  opacity: 0;
+}
+
+/* hover swap */
+.tea-card:hover .tea-img.main {
+  opacity: 0;
+}
+.tea-card:hover .tea-img.hover {
+  opacity: 1;
 }
