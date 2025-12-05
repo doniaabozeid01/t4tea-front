@@ -1,0 +1,39 @@
+<section class="tea-page">
+  <div
+    class="tea-section"
+    *ngFor="let section of sections"
+  >
+    <!-- عنوان السكشن -->
+    <header class="tea-header">
+      <h2 class="tea-title">
+        {{ section.title }}<span class="arrow">→</span>
+      </h2>
+    </header>
+
+    <!-- الجريد -->
+    <div class="tea-grid">
+      <article
+        class="tea-card"
+        *ngFor="let product of section.products"
+      >
+        <div class="tea-thumb">
+          <img
+            class="base"
+            [src]="product.image"
+            [alt]="product.name"
+          />
+          <img
+            class="hover"
+            [src]="product.hoverImage"
+            [alt]="product.name + ' details'"
+          />
+        </div>
+
+        <div class="tea-info">
+          <h3 class="tea-name">{{ product.name }}</h3>
+          <p class="tea-price">LE {{ product.price | number:'1.2-2' }}</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

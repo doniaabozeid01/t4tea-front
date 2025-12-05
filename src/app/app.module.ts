@@ -14,7 +14,8 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { PendingComponent } from './Components/pending/pending.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BestSellerComponent } from './Components/HomeSections/best-seller/best-seller.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // ✅ مهم
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShopComponent } from './Components/shop/shop.component'; // ✅ مهم
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     NavbarComponent,
     FooterComponent,
     PendingComponent,
-    BestSellerComponent
+    BestSellerComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,

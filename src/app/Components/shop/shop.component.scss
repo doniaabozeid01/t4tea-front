@@ -1,0 +1,139 @@
+/* الصفحة كلها */
+.tea-page {
+  height: 100vh;                 // كل سكشن ياخد شاشة
+  overflow-y: auto;
+  scroll-snap-type: y mandatory; // سكرول سكشن سكشن
+}
+
+/* كل سكشن (GREEN TEA) */
+.tea-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  background-color: #f4e6d5;
+  padding: 80px 5vw 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* عنوان السكشن */
+.tea-header {
+  text-align: left;
+}
+
+.tea-title {
+  font-size: 18px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.tea-title .arrow {
+  margin-left: 6px;
+}
+
+/* الجريد */
+.tea-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 80px 40px;
+  justify-items: center;
+}
+
+/* الكارد */
+.tea-card {
+  text-align: center;
+  cursor: pointer;
+}
+
+/* الصورة (دايرة الشاي) */
+.tea-thumb {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+.tea-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* الصورة الأساسية */
+.tea-thumb img.base {
+  opacity: 1;
+}
+
+/* صورة الهوفر */
+.tea-thumb img.hover {
+  opacity: 0;
+}
+
+/* لما أهوّر على الكارد */
+.tea-card:hover .tea-thumb img.base {
+  opacity: 0;
+}
+
+.tea-card:hover .tea-thumb img.hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+/* النص تحت الصورة */
+.tea-info {
+  margin-top: 16px;
+}
+
+.tea-name {
+  font-size: 12px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.tea-price {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* ريسبونسيف */
+@media (max-width: 1024px) {
+  .tea-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px 30px;
+  }
+
+  .tea-thumb {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tea-page {
+    height: auto;              // على الموبايل نشيل الfull-screen scroll
+    scroll-snap-type: none;
+  }
+
+  .tea-section {
+    min-height: auto;
+    padding: 60px 16px 40px;
+  }
+
+  .tea-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tea-thumb {
+    width: 200px;
+    height: 200px;
+  }
+
+  .tea-title {
+    text-align: center;
+  }
+}
