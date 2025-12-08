@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 
 interface TeaProduct {
@@ -30,69 +31,94 @@ export class ShopComponent {
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },
         // كمّلي 9 برودكت أو اللي انتي عايزاه
       ]
     },
     {
       id: 'green-2',
-      title: 'GREEN TEA',
+      title: 'Black TEA',
       products: [
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },]
     },
     {
       id: 'green-3',
-      title: 'GREEN TEA',
+      title: 'Harphaghfds TEA',
       products: [
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },
         {
           name: 'First Blush',
           price: 374.31,
-          image: '../../../assets/hero/1.jpg',
-          hoverImage: '../../../assets/categories/First blush Tea 3.png'
+          image: '../../../assets/categories/First blush Tea 1.png',
+          hoverImage: '../../../assets/categories/hover.png'
         },]
     }
   ];
+
+  selectedCategory: TeaSection = this.sections[0];
+
+
+
+  selectCategory(cat: TeaSection) {
+    this.selectedCategory = cat;
+  }
+
+
+  teaCarouselOptions: OwlOptions = {
+    loop: true,
+    margin: 80,
+    nav: false,
+    dots: false,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    // navText: ['‹', '›'],
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      1200: { items: 3 }
+    }
+  };
 }

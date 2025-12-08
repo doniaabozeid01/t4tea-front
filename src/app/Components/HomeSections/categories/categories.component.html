@@ -17,9 +17,9 @@
 
         <ng-container *ngFor="let product of selectedCategory.products">
           <ng-template carouselSlide>
-            <div class="tea-card">
+            <div class="tea-card" routerLink="/details">
 
-              <div class="tea-image-wrap">
+              <div class="tea-image-wrap" >
                 <!-- الصورة الأساسية -->
                 <img class="tea-img main" [src]="product.image" [alt]="product.name" />
 

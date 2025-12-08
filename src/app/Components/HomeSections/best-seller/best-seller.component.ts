@@ -19,16 +19,16 @@ export class BestSellerComponent {
     {
       name: 'First Blush',
       price: 374.31,
-      packImage: 'assets/bestSeller/pack1.png',
-      looseImage: 'assets/bestSeller/loose1.png',
-      hoverImage: 'assets/bestSeller/hover1.png'
+      packImage: '../../../../assets/bestSeller/6 (2) 2.png',
+      looseImage: '../../../../assets/bestSeller/First blush Tea 1.png',
+      hoverImage: '../../../../assets/bestSeller/hover.png'
     },
     {
       name: 'Emerald Dew',
       price: 399,
-      packImage: 'assets/bestSeller/pack2.png',
-      looseImage: 'assets/bestSeller/loose1.png',
-      hoverImage: 'assets/bestSeller/hover1.png'
+      packImage: '../../../../assets/bestSeller/6 (2) 2.png',
+      looseImage: '../../../../assets/bestSeller/First blush Tea 1.png',
+      hoverImage: '../../../../assets/bestSeller/hover.png'
     }
   ];
 

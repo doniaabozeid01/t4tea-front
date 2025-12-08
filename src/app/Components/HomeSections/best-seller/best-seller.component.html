@@ -12,13 +12,13 @@
           <div class="slide-content">
 
             <!-- صورة العلبة -->
-            <div class="product-image pack">
+            <div class="product-image pack " routerLink="/details">
               <img [src]="product.packImage" alt="pack" />
             </div>
 
             <!-- loose img + hover -->
             <div class="product-image loose">
-              <img
+              <img routerLink="/details"
                 class="loose-img"
                 [src]="product.looseImage"
                 (mouseenter)="looseImg.src = product.hoverImage"

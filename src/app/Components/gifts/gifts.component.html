@@ -1,0 +1,32 @@
+<section>
+    <div class="title">
+        <h2 class="mb-0">GIFTS</h2>
+    </div>
+
+    <section class="teaware-section">
+        <div class="teaware-container">
+
+            <div class=" row">
+
+                <div class="teaware-card col-6 d-flex justify-content-center mb-5 " *ngFor="let item of teaware">
+
+                    <div class="in-col">
+
+                        <div class="teaware-image">
+                            <img [src]="item.image" [alt]="item.name">
+                        </div>
+
+                        <h3 class="teaware-card-title">{{ item.name }}</h3>
+
+                        <p class="teaware-price">
+                            LE {{ item.price }} EGP
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</section>

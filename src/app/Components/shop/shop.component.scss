@@ -1,13 +1,13 @@
 /* الصفحة كلها */
 .tea-page {
-  height: 100vh;                 // كل سكشن ياخد شاشة
+  // height: 100vh;                 // كل سكشن ياخد شاشة
   overflow-y: auto;
   scroll-snap-type: y mandatory; // سكرول سكشن سكشن
 }
 
 /* كل سكشن (GREEN TEA) */
 .tea-section {
-  min-height: 100vh;
+  // min-height: 100vh;
   scroll-snap-align: start;
   background-color: #f4e6d5;
   padding: 80px 5vw 60px;
@@ -136,4 +136,50 @@
   .tea-title {
     text-align: center;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* الصور الدائرية */
+.tea-image-wrap {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.tea-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.tea-img.main {
+  opacity: 1;
+}
+
+.tea-img.hover {
+  opacity: 0;
+}
+
+/* hover swap */
+.tea-card:hover .tea-img.main {
+  opacity: 0;
+}
+.tea-card:hover .tea-img.hover {
+  opacity: 1;
 }

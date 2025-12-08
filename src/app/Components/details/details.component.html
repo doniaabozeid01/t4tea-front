@@ -1,0 +1,77 @@
+<section class="product-detail-page py-4">
+
+  <div class="product-grid row g-2">
+
+    <!-- العمود الأيسر (الصور) -->
+    <div class="left-col col-md-6">
+
+      <owl-carousel-o [options]="teaDetailsOptions">
+        <ng-container *ngFor="let image of product.images">
+          <ng-template carouselSlide>
+            <div class="main-image">
+              <img [src]="image" alt="{{ product.name }}" />
+            </div>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+
+    </div>
+
+    <!-- العمود الأيمن (التفاصيل) -->
+    <div class="right-col col-md-6">
+
+      <header class="product-header">
+        <h1 class="product-name">{{ product.name }}</h1>
+        <p class="product-type">{{ product.type }}</p>
+        <p class="product-weight">Weight: {{ product.weight }}</p>
+      </header>
+
+      <!-- الكمية والأزرار -->
+      <div class="actions">
+
+        <div class="quantity-box text-center">
+          <button type="button" (click)="decrease()">−</button>
+          <input class="text-center" type="number" [value]="quantity" readonly />
+          <button type="button" (click)="increase()">+</button>
+        </div>
+
+        <button class="btn-outline" type="button" (click)="addToCart()">
+          ADD TO CART
+        </button>
+
+        <button class="btn-primary" type="button" (click)="buyNow()">
+          Buy Now
+        </button>
+      </div>
+
+      <section class="ingredients">
+        <h3>Ingredients</h3>
+        <p>{{ product.ingredientsText }}</p>
+      </section>
+
+      <section class="tasting-notes">
+        <h3>Tasting Notes</h3>
+        <p>
+          {{ product.tastingNotes }}
+        </p>
+      </section>
+
+      <section class="brew-section">
+        <div class="brew-item" *ngFor="let item of brewInfo">
+          <div class="brew-icon">
+            <img [src]="item.icon" [alt]="item.label" />
+          </div>
+          <div class="brew-text">
+            <span class="brew-label">{{ item.label }}</span>
+            <span class="brew-desc">{{ item.description }}</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- سطر ال Brew Info تحت -->
+
+
+</section>

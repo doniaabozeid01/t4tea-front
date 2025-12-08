@@ -1,0 +1,143 @@
+$bg-page: #f9f1e6;
+$bg-header: #e4e6ec;
+$bg-why: #EFEFEF;
+$text-main: #3a3a3a;
+$accent: #b58b57;
+
+
+
+.title {
+    height: 10vh;
+
+    text-align: center;
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.about-page {
+    //   min-height: 100vh;
+    background-color: $bg-page;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    color: $text-main;
+}
+
+/* شريط العنوان */
+.about-header {
+    background-color: $bg-header;
+    text-align: center;
+    padding: 14px 12px;
+
+    h2 {
+        // font-size: 11px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        margin: 0;
+    }
+}
+
+/* سكشن البراند */
+.brand-founder {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 32px;
+    gap: 24px;
+}
+
+.brand-left {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    .logo-box {
+        width: 50%;
+        margin: auto;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .intro-text {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+.brand-right {
+    p {
+        font-size: 20px;
+        line-height: 1.7;
+        margin-bottom: 10px;
+    }
+}
+
+/* WHY YOU CHOOSE */
+.why-choose {
+    background-color: $bg-why;
+    padding: 18px 16px 26px;
+    text-align: center;
+
+    h3 {
+        // font-size: 10px;
+        letter-spacing: 2px;
+        margin: 0 0 16px;
+    }
+
+    .icons-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    img {
+        width: 85%;
+        max-height: 230px;
+        object-fit: fill;
+    }
+}
+
+/* النص السفلي */
+.bottom-text {
+    padding: 20px 24px 32px;
+
+    p {
+        font-size: 20px;
+        line-height: 1.7;
+        margin-bottom: 14px;
+    }
+}
+
+/* ديسكتوب: نخلي اليسار/اليمين جنب بعض */
+@media (min-width: 768px) {
+    .brand-founder {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-inline: 40px;
+    }
+
+    .brand-left {
+        flex: 0 0 40%;
+    }
+
+    .brand-right {
+        flex: 1;
+    }
+
+    .why-choose {
+        padding-inline: 40px;
+    }
+
+    .bottom-text {
+        padding-inline: 40px;
+    }
+}

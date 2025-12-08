@@ -16,6 +16,11 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { BestSellerComponent } from './Components/HomeSections/best-seller/best-seller.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShopComponent } from './Components/shop/shop.component'; // ✅ مهم
+import { CommonModule } from '@angular/common';
+import { GiftsComponent } from './Components/gifts/gifts.component';
+import { TeawarePageComponent } from './Components/teaware-page/teaware-page.component';
+import { AboutComponent } from './Components/about/about.component';
+import { DetailsComponent } from './Components/details/details.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +35,18 @@ import { ShopComponent } from './Components/shop/shop.component'; // ✅ مهم
     FooterComponent,
     PendingComponent,
     BestSellerComponent,
-    ShopComponent
+    ShopComponent,
+    GiftsComponent,
+    TeawarePageComponent,
+    AboutComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     CarouselModule
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
