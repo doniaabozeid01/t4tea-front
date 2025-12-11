@@ -1,0 +1,127 @@
+/* صفحة كاملة */
+.login-page {
+  min-height: 85vh;
+  background-color: #f4e6d5; /* لون البيج */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* الصندوق */
+.login-box {
+  text-align: center;
+  width: 380px;
+}
+
+/* العنوان */
+.title {
+  letter-spacing: 4px;
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+/* السطر اللي تحت LOGIN */
+.subtitle {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-size: 13px;
+  text-decoration: underline;
+  color: #1c3b45;
+}
+
+/* الحقول */
+.input-group {
+  border: 1px solid #000;
+  margin-bottom: 18px;
+  padding: 12px 14px;
+  text-align: left;
+}
+
+.input-group input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 13px;
+  background: transparent;
+}
+
+/* حقل الباسورد مع اللينك */
+.password-group {
+  position: relative;
+  padding-right: 140px; /* مساحة للـ “Forgot your password?” */
+}
+
+.forgot-link {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  text-decoration: none;
+  color: #777;
+}
+
+/* زرار LOGIN */
+// .login-btn {
+//   width: 100%;
+//   padding: 14px 0;
+//   margin-top: 10px;
+//   border: none;
+//   cursor: pointer;
+//   font-size: 14px;
+//   letter-spacing: 3px;
+//   background-color: #003629; /* أخضر غامق */
+//   color: #ffffff;
+// }
+
+/* تحت الزرار */
+.footer-text {
+  margin-top: 18px;
+  font-size: 12px;
+}
+
+.signup-link {
+  text-decoration: underline;
+  margin-left: 3px;
+  color: #000;
+}
+
+
+
+.login-btn {
+  position: relative;
+  width: 100%;
+  padding: 14px 0;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 3px;
+  border: 1px solid #003629;
+  background: transparent;
+  color: #ffffff;          /* لون الكلام فوق الخلفية الغامقة */
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.4s ease;
+}
+
+/* الخلفية المتحركة */
+.login-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;                /* top/right/bottom/left = 0 */
+  background: #003629;     /* لون الخلفية */
+  z-index: -1;
+  transform: translateX(0);          /* مغطّي الزرار كله في الأول */
+  transition: transform 0.5s ease;   /* سرعة ونعومة الحركة */
+}
+
+/* لما أقف على الزرار: الخلفية تتسحب من الشمال لليمين ويبان الـ outline */
+.login-btn:hover::before {
+  transform: translateX(100%);
+}
+
+/* نخلي لون الكلام غامق لما الخلفية تختفي */
+.login-btn:hover {
+  color: #003629;
+}

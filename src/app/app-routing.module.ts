@@ -6,6 +6,7 @@ import { GiftsComponent } from './Components/gifts/gifts.component';
 import { TeawarePageComponent } from './Components/teaware-page/teaware-page.component';
 import { AboutComponent } from './Components/about/about.component';
 import { DetailsComponent } from './Components/details/details.component';
+import { LoginComponent } from './Components/login/login.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -15,6 +16,8 @@ const routes: Routes = [
   { path: 'gifts', component: GiftsComponent },
   { path: 'about', component: AboutComponent },
   { path: 'details', component: DetailsComponent },
+  { path: 'login', component: LoginComponent },
+
 
 ];
 

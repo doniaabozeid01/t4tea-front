@@ -1,8 +1,5 @@
 <section class="tea-page">
-  <div
-    class="tea-section "
-    *ngFor="let section of sections"
-  >
+  <div class="tea-section " *ngFor="let section of sections">
     <!-- عنوان السكشن -->
     <header class="tea-header">
       <h2 class="tea-title mb-4">
@@ -14,14 +11,14 @@
 
         <ng-container *ngFor="let product of selectedCategory.products">
           <ng-template carouselSlide>
-            <div class="tea-card" routerLink="/details">
+            <div class="tea-card ">
 
-              <div class="tea-image-wrap">
+              <div class="tea-image-wrap" routerLink="/details">
                 <!-- الصورة الأساسية -->
                 <img class="tea-img main" [src]="product.image" [alt]="product.name" />
 
                 <!-- صورة الهوفر -->
-                <img class="tea-img hover" *ngIf="product.hoverImage" [src]="product.hoverImage"
+                <img class="tea-img hover p-3" *ngIf="product.hoverImage" [src]="product.hoverImage"
                   [alt]="product.name + ' hover'" />
               </div>
 
@@ -30,6 +27,11 @@
                 <p class="tea-price">LE {{ product.price }} EGP</p>
               </div>
 
+
+
+              <button class="btn btn-rounded">
+                <i class="fa-solid fa-plus"></i>
+              </button>
             </div>
           </ng-template>
         </ng-container>

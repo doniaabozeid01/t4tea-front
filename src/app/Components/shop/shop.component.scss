@@ -1,8 +1,15 @@
 /* الصفحة كلها */
 .tea-page {
   // height: 100vh;                 // كل سكشن ياخد شاشة
-  overflow-y: auto;
-  scroll-snap-type: y mandatory; // سكرول سكشن سكشن
+  // overflow-y: auto;
+  // scroll-snap-type: y mandatory; // سكرول سكشن سكشن
+}
+
+
+
+.tea-carousel{
+      // pointer-events: none;        /* الكليك مقفول على الكونتينر */
+
 }
 
 /* كل سكشن (GREEN TEA) */
@@ -42,6 +49,7 @@
 /* الكارد */
 .tea-card {
   text-align: center;
+  position: relative;
   cursor: pointer;
 }
 
@@ -182,4 +190,28 @@
 }
 .tea-card:hover .tea-img.hover {
   opacity: 1;
+}
+
+
+
+.btn-rounded {
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 9999;
+    bottom: 25%;
+    right: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+
+}
+
+
+.tea-card:hover .btn-rounded {
+    opacity: 1;
 }

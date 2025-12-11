@@ -21,6 +21,7 @@ import { GiftsComponent } from './Components/gifts/gifts.component';
 import { TeawarePageComponent } from './Components/teaware-page/teaware-page.component';
 import { AboutComponent } from './Components/about/about.component';
 import { DetailsComponent } from './Components/details/details.component';
+import { LoginComponent } from './Components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { DetailsComponent } from './Components/details/details.component';
     GiftsComponent,
     TeawarePageComponent,
     AboutComponent,
-    DetailsComponent
+    DetailsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

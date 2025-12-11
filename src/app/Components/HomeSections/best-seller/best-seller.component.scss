@@ -5,6 +5,7 @@
 
 .best-sellers-container {
   text-align: center;
+  width: 75%;
 }
 
 .best-sellers-title {
@@ -62,9 +63,39 @@
 }
 
 .owl-dots .owl-dot span {
-  background: rgba(0,0,0,0.3) !important;
+  background: rgba(0, 0, 0, 0.3) !important;
 }
 
 .owl-dots .owl-dot.active span {
   background: #000 !important;
 }
+
+
+
+
+@media (max-width : 768px) {
+  .best-sellers-container {
+    width: 90%;
+  }
+
+
+  .pack {
+    width: 40%;
+    // background-color: #0a4035;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .loose {
+    width: 40%;
+    // background-color: #0a4035;
+
+    .loose-img {
+      width: 100% !important;
+    }
+  }
+
+}
+

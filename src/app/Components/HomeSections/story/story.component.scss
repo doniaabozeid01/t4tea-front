@@ -1,6 +1,7 @@
 /* ===== STORY SECTION ===== */
 .story-section {
-  background-color: #f4e6d5; /* خلفية بيج نفس الشكل */
+  background-color: #f4e6d5;
+  /* خلفية بيج نفس الشكل */
   padding: 60px 0;
   font-family: Arial, sans-serif;
 }
@@ -29,10 +30,11 @@
 
 /* الصورة */
 .story-image img {
-  width: 500px;
-  height: 350px;
-  object-fit: cover;
-//   border: 3px solid #1d75b9; /* بوردر أزرق زي اللي ظاهر */
+  width: 600px;
+  height: 450px;
+  width: 100%;
+  object-fit: fill;
+  //   border: 3px solid #1d75b9; /* بوردر أزرق زي اللي ظاهر */
 }
 
 /* النص */

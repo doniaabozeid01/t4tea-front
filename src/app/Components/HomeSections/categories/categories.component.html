@@ -19,19 +19,26 @@
           <ng-template carouselSlide>
             <div class="tea-card" routerLink="/details">
 
-              <div class="tea-image-wrap" >
+              <div class="tea-image-wrap">
                 <!-- الصورة الأساسية -->
                 <img class="tea-img main" [src]="product.image" [alt]="product.name" />
 
                 <!-- صورة الهوفر -->
-                <img class="tea-img hover" *ngIf="product.hoverImage" [src]="product.hoverImage"
+                <img class="tea-img hover p-3" *ngIf="product.hoverImage" [src]="product.hoverImage"
                   [alt]="product.name + ' hover'" />
+
+
               </div>
 
               <div class="tea-info">
                 <p class="tea-name">{{ product.name }}</p>
                 <p class="tea-price">LE {{ product.price }} EGP</p>
               </div>
+
+
+              <button class="btn btn-rounded">
+                <i class="fa-solid fa-plus"></i>
+              </button>
 
             </div>
           </ng-template>

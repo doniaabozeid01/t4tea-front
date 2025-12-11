@@ -134,13 +134,13 @@
 
 .hero-media {
     width: 100%;
-    height: 80vh; // زي ما طلبتي
+    height: 70vh; // زي ما طلبتي
     object-fit: fill; // يخلي الصورة/الفيديو مغطّي المساحة من غير تمديد غريب
     display: block;
 }
 
 @media (max-width: 768px) {
     .hero-media {
-        height: 60vh;
+        height: 40vh;
     }
 }

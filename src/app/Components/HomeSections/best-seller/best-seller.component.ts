@@ -36,9 +36,11 @@ export class BestSellerComponent {
     loop: true,
     margin: 40,
     dots: true,
-    nav: false,
-    // navText: ['‹','›'],
+    nav: true,
+    navText: ['‹', '›'],
     items: 1,
-    autoplay: false
+    autoplay: false,
+    smartSpeed: 700   // ← سرعة الحركة (كلما زادت القيمة الحركة أبطأ)
+
   };
 }
